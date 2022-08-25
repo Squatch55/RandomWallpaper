@@ -107,7 +107,7 @@ namespace RandomWallpaper
                     Console.WriteLine(@"* How much wallpaper do you want ? Ex: 5", Color.Pink);
                     Console.Write("* ");
                     int wallnum = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine("* Alright, wallpaper is getting ready to apply please wait.", Color.Pink);
+                    Console.WriteLine("* Alright, wallpaper is getting ready to download please wait.", Color.Pink);
                     ServicePointManager.Expect100Continue = true;
                     ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                     HttpWebRequest webRequest = (HttpWebRequest)HttpWebRequest.Create($"https://wallhaven.cc/api/v1/search?q={category}&sorting=random&resolutions={resolution}");
