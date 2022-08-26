@@ -48,7 +48,7 @@ namespace RandomWallpaper
                     {
                         ServicePointManager.Expect100Continue = true;
                         ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-                        HttpWebRequest webRequest = (HttpWebRequest)HttpWebRequest.Create($"https://wallhaven.cc/api/v1/search?q={category}&sorting=random&resolutions={resolution}");
+                        HttpWebRequest webRequest = (HttpWebRequest)HttpWebRequest.Create($"https://wallhaven.cc/api/v1/search?q={category}&purity=110&sorting=random&resolutions={resolution}");
                         webRequest.Proxy = null;
                         using (var response = webRequest.GetResponse())
                         using (var content = response.GetResponseStream())
@@ -110,7 +110,7 @@ namespace RandomWallpaper
                     Console.WriteLine("* Alright, wallpaper is getting ready to download please wait.", Color.Pink);
                     ServicePointManager.Expect100Continue = true;
                     ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-                    HttpWebRequest webRequest = (HttpWebRequest)HttpWebRequest.Create($"https://wallhaven.cc/api/v1/search?q={category}&sorting=random&resolutions={resolution}");
+                    HttpWebRequest webRequest = (HttpWebRequest)HttpWebRequest.Create($"https://wallhaven.cc/api/v1/search?q={category}&purity=110&sorting=random&resolutions={resolution}");
                     webRequest.Proxy = null;
                     using (var response = webRequest.GetResponse())
                     using (var content = response.GetResponseStream())
